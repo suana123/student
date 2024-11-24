@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Advanced Apology Letter Animation</title>
+  <style>
+    body {
+      background-color: #f0f0f0;
+      font-family: 'Arial', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      overflow: hidden;
+    }
+
+    .container {
+      position: relative;
+      width: 400px;
+      height: 550px;
+      perspective: 1200px;
+    }
+
+    .letter {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      opacity: 0;
+      transform: translateY(-30px);
+      animation: fadeInLetter 2s forwards;
+    }
+
+    @keyframes fadeInLetter {
+      0% {
+        opacity: 0;
+        transform: translateY(-30px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .card {
+      background-color: #ffffff;
+      width: 80%;
+      height: 80%;
+      padding: 20px;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+      transform: rotateX(90deg);
+      opacity: 0;
+      border-radius: 12px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      animation: slideInCard 2s forwards;
+    }
+
+    @keyframes slideInCard {
+      0% {
+        transform: rotateX(90deg);
+        opacity: 0;
+      }
+      100% {
+        transform: rotateX(0deg);
+        opacity: 1;
+      }
+    }
+
+    .header {
+      font-size: 32px;
+      font-weight: bold;
+      color: #2c3e50;
+      text-align: center;
+      margin-bottom: 15px;
+    }
+
+    .message {
+      font-size: 18px;
+      color: #34495e;
+      text-align: center;
+      line-height: 1.6;
+      margin-bottom: 20px;
+      opacity: 0;
+      animation: fadeInMessage 2s 1s forwards;
+    }
+
+    @keyframes fadeInMessage {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+
+    .sorry {
+      font-size: 38px;
+      font-weight: bold;
+      color: #e74c3c;
+      text-align: center;
+      margin-top: 20px;
+      animation: bounce 1s infinite;
+    }
+
+    @keyframes bounce {
+      0% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-20px);
+      }
+      100% {
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <div class="letter">
+    <div class="card">
+      <div class="header">I'm Sorry</div>
+      <div class="message">
+        <p>Dear Student,</p>
+        <p>I'm really sorry for the mistake I made.</p>
+        <p>I promise it won't happen again!</p>
+      </div>
+      <div class="sorry">Sorry!</div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
